@@ -1,0 +1,55 @@
+/* Par défaut, cacher la carte */
+.card {
+
+  top: 100%; /* Placer la carte juste sous le header */
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  visibility: hidden; /* Masquer la carte initialement */
+  opacity: 0; /* La carte est invisible */
+  transition: opacity 0.3s ease, visibility 0s 0.3s; /* Transitions douces */
+}
+
+/* Apparition de la carte au hover */
+.icon-container:hover .card {
+  visibility: visible; /* Afficher la carte */
+  opacity: 1; /* Rendre la carte visible */
+  transition: opacity 0.3s ease, visibility 0s; /* Réinitialiser la transition */
+}
+
+.card p {
+  margin: 8px 0;
+  font-size: 16px;
+}
+
+.card .pp {
+  color: #f39c12;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.card .pp:hover {
+  color: #e74c3c;
+}
+
+.card button {
+  background-color: #e74c3c;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.card button:hover {
+  background-color: #c0392b;
+}

@@ -1,0 +1,83 @@
+/* General styles for HeroSlider */
+.hero-slider-container {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Adjust to fit the top of the page */
+    overflow: hidden;
+  }
+  
+  .hero-slider {
+    display: flex;
+    width: 400%; /* Total width for 4 slides */
+    height: 100%;
+    transition: transform 1.5s ease;
+  }
+  
+  .slide {
+    position: relative;
+    flex: 0 0 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .slide-content {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: white;
+    z-index: 2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+  }
+  
+  .slide-content h1 {
+    font-size: 3rem;
+    margin: 0;
+  }
+  
+  .slide-content p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+  }
+  
+  .slide::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.8));
+    z-index: 1;
+  }
+  
+  .slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 10px 15px;
+    z-index: 10;
+  }
+  
+  .slider-nav.left {
+    left: 15px;
+  }
+  
+  .slider-nav.right {
+    right: 15px;
+  }
+  
+  .slider-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
